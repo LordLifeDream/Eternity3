@@ -14,6 +14,8 @@ import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 import java.io.File;
 import java.net.URI;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class GitFeature extends FeatureImpl{
     private Git git;
@@ -34,6 +36,19 @@ public class GitFeature extends FeatureImpl{
         this.username = sc.nextLine();
         System.out.println("enter pass/token, or nothing for none");
         this.pass = sc.nextLine();
+    }
+
+    /**
+     * gets this repo as username/repo from the remote url.
+     * this will return null if the remote url is not a GitHub url.
+     * @return the username/repo String, or null if the sequence could not be regexed
+     */
+    public String getUsernameRepo(){
+        Pattern p = Pattern.compile(".*//github\\.com/(.+)\\.git");
+        Matcher m = p.matcher(this.remoteURL);
+        if(m.matches()) return m.group(1);
+        return null;
+
     }
 
     @Override

@@ -36,11 +36,12 @@ public class GHWWPullFeature extends FeatureImpl{
         GitFeature f = app.getFeature(GitFeature.class);
         this.app = app;
         this.git = f;
-        String remoteUrl = f.getRemoteURL();
-        Pattern p = Pattern.compile(".*//github\\.com/(.+)\\.git");
-        Matcher m = p.matcher(remoteUrl);
-        m.matches();
-        this.repoName = m.group(1);
+        //String remoteUrl = f.getRemoteURL();
+        //Pattern p = Pattern.compile(".*//github\\.com/(.+)\\.git");
+        //Matcher m = p.matcher(remoteUrl);
+        //m.matches();
+        //this.repoName = m.group(1);
+        this.repoName = f.getUsernameRepo();
         createClient();
     }
 

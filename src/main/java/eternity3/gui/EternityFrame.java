@@ -34,6 +34,10 @@ public class EternityFrame extends JFrame {
         JMenuItem save = new JMenuItem("save");
         save.addActionListener((e)->AppManager.save());
         appManager.add(save);
+        //stop all
+        JMenuItem stopAll = new JMenuItem("end all");
+        stopAll.addActionListener((e)->AppManager.endAll());
+        appManager.add(stopAll);
 
         //-----------
         appManager.addSeparator();
