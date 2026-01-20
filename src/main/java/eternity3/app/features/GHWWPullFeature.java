@@ -1,10 +1,7 @@
 package eternity3.app.features;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import eternity3.AppManager;
 import eternity3.app.App;
-import org.eclipse.jgit.api.Git;
-import org.java_websocket.WebSocketImpl;
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
 import tools.jackson.databind.JsonNode;

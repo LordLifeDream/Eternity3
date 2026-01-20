@@ -3,11 +3,13 @@ package eternity3.gui.app;
 import eternity3.app.App;
 import eternity3.app.StartStopListener;
 import eternity3.app.features.Feature;
+import eternity3.gui.extra.outputviewer.ProcessOutputViewerPanel;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
+import java.util.Date;
 
 public class AppPanel extends JPanel {
     private App app;
@@ -27,11 +29,29 @@ public class AppPanel extends JPanel {
         this.appOptions = new JPanel();
         this.appOptions.setLayout(new BoxLayout(appOptions, BoxLayout.Y_AXIS));
         this.fillAppOptions();
-        this.add(appOptions, BorderLayout.CENTER);
+        this.add(appOptions, BorderLayout.WEST);
         this.addStatusText();
         this.controlBar = new JPanel();
         this.filLControlBar();
         this.add(controlBar, BorderLayout.SOUTH);
+        //app out
+        ProcessOutputViewerPanel output = new ProcessOutputViewerPanel();
+        if(app.getProcess() !=null) output.initListener(app.getProcess());
+        app.addListener(new StartStopListener() {
+            @Override
+            public void onStart(App app) {
+                String msg = "--App started at "+new Date()+"--";
+                output.addLog(msg, Color.MAGENTA);
+                output.initListener(app.getProcess());
+            }
+            @Override
+            public void onStop(App app, int exitCode) {
+                String msg = "--App stopped at "+new Date()+"--";
+                output.addLog(msg, Color.MAGENTA);
+            }
+        });
+        output.setBorder(BorderFactory.createTitledBorder(BorderFactory.createRaisedBevelBorder(), "output"));
+        this.add(output, BorderLayout.CENTER);
     }
 
     private void filLControlBar(){
