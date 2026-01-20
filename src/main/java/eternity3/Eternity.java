@@ -51,8 +51,6 @@ public class Eternity {
         System.exit(0);
     }
 
-
-
     //constants
     public static  final Class<Feature>[] FEATURE_CLASSES = new Class[]{
             StartOnInitFeature.class,
