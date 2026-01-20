@@ -1,0 +1,64 @@
+package eternity3.gui;
+
+import eternity3.AppManager;
+import eternity3.Eternity;
+
+import javax.swing.*;
+
+public class EternityFrame extends JFrame {
+
+    public static void main(String[] args) {
+        AppManager.load();
+        new EternityFrame();
+        Eternity.main(new String[0]);
+    }
+
+
+    public EternityFrame(){
+        this.setSize(1600, 900);
+        this.setContentPane(new EternityMainPanel());
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        addMenuBar();
+        this.setVisible(true);
+    }
+
+    private void addMenuBar(){
+        JMenuBar b = new JMenuBar();
+        addEternityCategory(b);
+        addAppManagerCategory(b);
+        this.setJMenuBar(b);
+    }
+    private void addAppManagerCategory(JMenuBar b){
+        JMenu appManager = new JMenu("AppManager");
+        //save
+        JMenuItem save = new JMenuItem("save");
+        save.addActionListener((e)->AppManager.save());
+        appManager.add(save);
+
+        //-----------
+        appManager.addSeparator();
+        //pretty print
+        JCheckBoxMenuItem prettyPrint = new JCheckBoxMenuItem("pretty print");
+        prettyPrint.setState(AppManager.prettyPrint);
+        prettyPrint.addActionListener((e)->AppManager.prettyPrint = prettyPrint.getState());
+        appManager.add(prettyPrint);
+
+        b.add(appManager);
+    }
+
+    private void addEternityCategory(JMenuBar b){
+        JMenu eternity = new JMenu("Eternity");
+        //dispose
+        JMenuItem dispose = new JMenuItem("dispose window");
+        dispose.addActionListener((e)->Eternity.disposeUI());
+        eternity.add(dispose);
+        //quit
+        JMenuItem quit = new JMenuItem("exit");
+        quit.addActionListener((e)-> {
+            this.setVisible(false);
+            Eternity.exit();
+        });
+        eternity.add(quit);
+        b.add(eternity);
+    }
+}
