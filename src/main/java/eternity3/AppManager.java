@@ -19,6 +19,7 @@ public class AppManager {
         MAPPER = JsonMapper.builder()
                 .registerSubtypes(Eternity.FEATURE_CLASSES)
                 .build();
+        Runtime.getRuntime().addShutdownHook(new Thread(AppManager::endAll));
     }
 
     public static App getApp(String name){
@@ -57,5 +58,9 @@ public class AppManager {
     public static void save(){
         ObjectWriter wr = prettyPrint? MAPPER.writer():MAPPER.writerWithDefaultPrettyPrinter();
         wr.writeValue(new File("./apps.json"), apps);
+    }
+
+    public static void endAll(){
+        apps.forEach(App::stop);
     }
 }
