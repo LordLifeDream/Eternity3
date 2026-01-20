@@ -2,7 +2,7 @@
   <artifact build-on-make="true" name="Eternity3:jar">
     <output-path>$PROJECT_DIR$/../E3Builds</output-path>
     <root id="root">
-      <element id="archive" name="Eternity3.jar">
+      <element id="archive" name="eternity3.jar">
         <element id="module-output" name="Eternity3" />
       </element>
       <element id="directory" name="lib">
@@ -24,6 +24,7 @@
         <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.17" />
         <element id="library" level="project" name="Maven: tools.jackson.core:jackson-core:3.0.3" />
         <element id="library" level="project" name="Maven: tools.jackson.core:jackson-databind:3.0.3" />
+        <element id="library" level="project" name="Maven: net.lingala.zip4j:zip4j:2.11.5" />
       </element>
     </root>
   </artifact>

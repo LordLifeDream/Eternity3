@@ -34,5 +34,7 @@ public class Commands {
         commands.add(new RemoveAppCommand());
         commands.add(new AddFeatureCommand());
         commands.add(new GUICommand());
+        commands.add(new UpdateCommand());
+        commands.add(new UpdateCheckCommand());
     }
 }

@@ -7,5 +7,6 @@ Class-Path: lib/jackson-core-2.20.0.jar lib/jsr305-3.0.2.jar lib/spotbug
  -databind-3.0.3.jar lib/org.eclipse.jgit-7.5.0.202512021534-r.jar lib/j
  ackson-annotations-2.20.jar lib/jackson-core-3.0.3.jar lib/Java-WebSock
  et-1.6.0.jar lib/bridge-method-annotation-1.31.jar lib/slf4j-api-2.0.17
- .jar lib/github-api-2.0-rc.5.jar lib/annotation-indexer-1.18.jar
+ .jar lib/github-api-2.0-rc.5.jar lib/annotation-indexer-1.18.jar lib/zi
+ p4j-2.11.5.jar
 

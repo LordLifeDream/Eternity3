@@ -40,3 +40,4 @@ build/
 /apps/
 /apps.json
 /test.json
+/.releaseVersion.txt
