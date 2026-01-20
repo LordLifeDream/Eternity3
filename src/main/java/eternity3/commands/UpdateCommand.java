@@ -7,7 +7,7 @@ import java.util.List;
 public class UpdateCommand extends Command{
     public UpdateCommand(){
         this.name = "Update";
-        this.aliases = new String[]{"update", "check", "upgrade", "checkupdate", "checkupgrade"};
+        this.aliases = new String[]{"update", "upgrade", "checkupdate", "checkupgrade"};
     }
 
     @Override

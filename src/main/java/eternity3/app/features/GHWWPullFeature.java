@@ -71,7 +71,7 @@ public class GHWWPullFeature extends FeatureImpl{
 
             @Override
             public void onMessage(String message) {
-                System.out.println(message);
+                //System.out.println(message);
                 JsonNode root =new ObjectMapper().readTree(message);
                 String type = root.get("t").asString();
                 switch(type){
