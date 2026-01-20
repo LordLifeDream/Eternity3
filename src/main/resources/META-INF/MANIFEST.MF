@@ -1,10 +1,11 @@
 Manifest-Version: 1.0
 Main-Class: eternity3.Eternity
-Class-Path: jackson-core-2.20.0.jar jsr305-3.0.2.jar spotbugs-annotation
- s-4.8.6.jar commons-io-2.16.1.jar commons-codec-1.20.0.jar jackson-data
- type-jsr310-2.20.0.jar jackson-databind-2.20.0.jar JavaEWAH-1.2.3.jar c
- ommons-lang3-3.18.0.jar jackson-databind-3.0.3.jar org.eclipse.jgit-7.5
- .0.202512021534-r.jar jackson-annotations-2.20.jar jackson-core-3.0.3.j
- ar Java-WebSocket-1.6.0.jar bridge-method-annotation-1.31.jar slf4j-api
- -2.0.17.jar github-api-2.0-rc.5.jar annotation-indexer-1.18.jar
+Class-Path: lib/jackson-core-2.20.0.jar lib/jsr305-3.0.2.jar lib/spotbug
+ s-annotations-4.8.6.jar lib/commons-io-2.16.1.jar lib/commons-codec-1.2
+ 0.0.jar lib/jackson-datatype-jsr310-2.20.0.jar lib/jackson-databind-2.2
+ 0.0.jar lib/JavaEWAH-1.2.3.jar lib/commons-lang3-3.18.0.jar lib/jackson
+ -databind-3.0.3.jar lib/org.eclipse.jgit-7.5.0.202512021534-r.jar lib/j
+ ackson-annotations-2.20.jar lib/jackson-core-3.0.3.jar lib/Java-WebSock
+ et-1.6.0.jar lib/bridge-method-annotation-1.31.jar lib/slf4j-api-2.0.17
+ .jar lib/github-api-2.0-rc.5.jar lib/annotation-indexer-1.18.jar
 

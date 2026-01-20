@@ -5,24 +5,26 @@
       <element id="archive" name="Eternity3.jar">
         <element id="module-output" name="Eternity3" />
       </element>
-      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.20.0" />
-      <element id="library" level="project" name="Maven: com.google.code.findbugs:jsr305:3.0.2" />
-      <element id="library" level="project" name="Maven: com.github.spotbugs:spotbugs-annotations:4.8.6" />
-      <element id="library" level="project" name="Maven: commons-io:commons-io:2.16.1" />
-      <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.20.0" />
-      <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.20.0" />
-      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.20.0" />
-      <element id="library" level="project" name="Maven: com.googlecode.javaewah:JavaEWAH:1.2.3" />
-      <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.18.0" />
-      <element id="library" level="project" name="Maven: tools.jackson.core:jackson-databind:3.0.3" />
-      <element id="library" level="project" name="Maven: org.eclipse.jgit:org.eclipse.jgit:7.5.0.202512021534-r" />
-      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.20" />
-      <element id="library" level="project" name="Maven: tools.jackson.core:jackson-core:3.0.3" />
-      <element id="library" level="project" name="Maven: org.java-websocket:Java-WebSocket:1.6.0" />
-      <element id="library" level="project" name="Maven: com.infradna.tool:bridge-method-annotation:1.31" />
-      <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.17" />
-      <element id="library" level="project" name="Maven: org.kohsuke:github-api:2.0-rc.5" />
-      <element id="library" level="project" name="Maven: org.jenkins-ci:annotation-indexer:1.18" />
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.20" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.20.0" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.20.0" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.20.0" />
+        <element id="library" level="project" name="Maven: com.github.spotbugs:spotbugs-annotations:4.8.6" />
+        <element id="library" level="project" name="Maven: com.google.code.findbugs:jsr305:3.0.2" />
+        <element id="library" level="project" name="Maven: com.googlecode.javaewah:JavaEWAH:1.2.3" />
+        <element id="library" level="project" name="Maven: com.infradna.tool:bridge-method-annotation:1.31" />
+        <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.20.0" />
+        <element id="library" level="project" name="Maven: commons-io:commons-io:2.16.1" />
+        <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.18.0" />
+        <element id="library" level="project" name="Maven: org.eclipse.jgit:org.eclipse.jgit:7.5.0.202512021534-r" />
+        <element id="library" level="project" name="Maven: org.java-websocket:Java-WebSocket:1.6.0" />
+        <element id="library" level="project" name="Maven: org.jenkins-ci:annotation-indexer:1.18" />
+        <element id="library" level="project" name="Maven: org.kohsuke:github-api:2.0-rc.5" />
+        <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.17" />
+        <element id="library" level="project" name="Maven: tools.jackson.core:jackson-core:3.0.3" />
+        <element id="library" level="project" name="Maven: tools.jackson.core:jackson-databind:3.0.3" />
+      </element>
     </root>
   </artifact>
 </component>
