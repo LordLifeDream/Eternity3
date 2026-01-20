@@ -22,9 +22,9 @@ public class GitFeature extends FeatureImpl{
 
     @Override
     public void guidedInit(boolean ui) {
-        this.remoteURL = this.promptString(ui, "enter remote url");
-        this.username = promptString(ui, "enter username, or nothing for none");
-        this.pass = promptString(ui, "enter pass/token, or nothing for none");
+        this.remoteURL = this.promptString(ui, "enter remote url", remoteURL);
+        this.username = promptString(ui, "enter username, or nothing for none", username);
+        this.pass = promptString(ui, "enter pass/token, or nothing for none", pass);
 
         if(true) return;
         Scanner sc = new Scanner(System.in);

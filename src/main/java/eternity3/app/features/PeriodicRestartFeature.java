@@ -33,7 +33,7 @@ public class PeriodicRestartFeature extends FeatureImpl{
 
     @Override
     public void guidedInit(boolean ui) {
-        this.restartTime = promptLong(ui, "please enter the restart time after start in minutes:")*60*1000;
+        this.restartTime = promptLong(ui, "please enter the restart time after start in minutes:", String.valueOf(restartTime/(1000*60)))*60*1000;
         if(true) return;
         Scanner sc = new Scanner(System.in);
         System.out.println("please enter the restart time after start in minutes:");

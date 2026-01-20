@@ -49,8 +49,8 @@ public class GHWWPullFeature extends FeatureImpl{
 
     @Override
     public void guidedInit(boolean ui) {
-        this.ghwwUrl = promptString(ui, "please enter your ghww url");
-        this.ghwwToken = promptString(ui, "please enter your ghww token");
+        this.ghwwUrl = promptString(ui, "please enter your ghww url", ghwwUrl);
+        this.ghwwToken = promptString(ui, "please enter your ghww token", ghwwToken);
         if(true) return;
 
         Scanner sc = new Scanner(System.in);

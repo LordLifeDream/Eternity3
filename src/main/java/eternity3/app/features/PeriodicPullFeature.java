@@ -38,7 +38,7 @@ public class PeriodicPullFeature extends FeatureImpl{
 
     @Override
     public void guidedInit(boolean ui) {
-        this.pullTime = promptLong(ui, "how often should be pulled (every x minutes)?")*1000*60;
+        this.pullTime = promptLong(ui, "how often should be pulled (every x minutes)?", String.valueOf(pullTime/1000*60))*1000*60;
         if(true)return;
         Scanner sc = new Scanner(System.in);
         System.out.println("how often should be pulled (every x minutes)?");
