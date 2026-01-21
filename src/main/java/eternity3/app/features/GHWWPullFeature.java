@@ -74,9 +74,7 @@ public class GHWWPullFeature extends FeatureImpl{
                     case "GREETINGS_ACK"-> this.send("{\"t\":\"SUBSCRIBE\",\"repo\":\""+repoName+"\"}");
                     case "EVENT"->{
                         String eventType = root.get("type").asString();
-                        System.out.println("GHWW event "+eventType);
                         if(eventType.equalsIgnoreCase("push")){
-                            System.out.println("GHWW pull+restart");
                             git.pull();
                             app.restart();
                         }
@@ -89,7 +87,7 @@ public class GHWWPullFeature extends FeatureImpl{
                 try {
                     TimeUnit.MILLISECONDS.sleep(5000);
                 } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
+                    System.err.println("sleep interrupted? Why? GHWW for "+app.getName());
                 }
                 //try again after 5 seconds
                 createClient();

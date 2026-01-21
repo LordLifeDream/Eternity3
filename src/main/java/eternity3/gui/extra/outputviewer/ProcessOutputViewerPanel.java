@@ -35,7 +35,7 @@ public class ProcessOutputViewerPanel extends JPanel {
                     addLog(finalLine, Color.BLUE);
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                //this happens. oops. TODO fix and make it not spam logs
             }
         }).start();
 
@@ -50,7 +50,7 @@ public class ProcessOutputViewerPanel extends JPanel {
                     addLog(finalLine, Color.RED);
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                //this happens. oops. TODO fix and make it not spam logs
             }
         }).start();
     }
