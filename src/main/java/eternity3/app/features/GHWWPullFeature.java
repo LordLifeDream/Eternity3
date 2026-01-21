@@ -10,8 +10,6 @@ import tools.jackson.databind.ObjectMapper;
 import java.net.URI;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class GHWWPullFeature extends FeatureImpl{
     private String ghwwUrl;
@@ -76,7 +74,9 @@ public class GHWWPullFeature extends FeatureImpl{
                     case "GREETINGS_ACK"-> this.send("{\"t\":\"SUBSCRIBE\",\"repo\":\""+repoName+"\"}");
                     case "EVENT"->{
                         String eventType = root.get("type").asString();
-                        if(eventType.toLowerCase().equals("push")){
+                        System.out.println("GHWW event "+eventType);
+                        if(eventType.equalsIgnoreCase("push")){
+                            System.out.println("GHWW pull+restart");
                             git.pull();
                             app.restart();
                         }
