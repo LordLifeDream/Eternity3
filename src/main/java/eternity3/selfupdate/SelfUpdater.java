@@ -78,7 +78,7 @@ public class SelfUpdater {
     }
 
 
-    private static String readThisVersion(){
+    public static String readThisVersion(){
         File versionFile = new File("./.releaseVersion.txt");
         if(!versionFile.exists()) return null;
         try(FileInputStream fis = new FileInputStream(versionFile)){
