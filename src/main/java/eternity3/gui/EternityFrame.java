@@ -37,18 +37,18 @@ public class EternityFrame extends JFrame {
     private void addAppManagerCategory(JMenuBar b){
         JMenu appManager = new JMenu("AppManager");
         //save
-        JMenuItem save = new JMenuItem("save");
+        JMenuItem save = new JMenuItem("Save");
         save.addActionListener((e)->AppManager.save());
         appManager.add(save);
         //stop all
-        JMenuItem stopAll = new JMenuItem("end all");
+        JMenuItem stopAll = new JMenuItem("End all");
         stopAll.addActionListener((e)->AppManager.endAll());
         appManager.add(stopAll);
 
         //-----------
         appManager.addSeparator();
         //pretty print
-        JCheckBoxMenuItem prettyPrint = new JCheckBoxMenuItem("pretty print");
+        JCheckBoxMenuItem prettyPrint = new JCheckBoxMenuItem("Pretty print");
         prettyPrint.setState(AppManager.prettyPrint);
         prettyPrint.addActionListener((e)->AppManager.prettyPrint = prettyPrint.getState());
         appManager.add(prettyPrint);
@@ -61,11 +61,11 @@ public class EternityFrame extends JFrame {
         ImageIcon eternityIcon = new ImageIcon(getClass().getClassLoader().getResource("images/icon_superSmall.png"));
         eternity.setIcon(eternityIcon);
         //dispose
-        JMenuItem dispose = new JMenuItem("dispose window");
+        JMenuItem dispose = new JMenuItem("Dispose window");
         dispose.addActionListener((e)->Eternity.disposeUI());
         eternity.add(dispose);
         //quit
-        JMenuItem quit = new JMenuItem("exit");
+        JMenuItem quit = new JMenuItem("Exit");
         quit.addActionListener((e)-> {
             this.setVisible(false);
             Eternity.exit();
