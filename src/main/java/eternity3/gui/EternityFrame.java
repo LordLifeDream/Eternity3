@@ -60,6 +60,10 @@ public class EternityFrame extends JFrame {
         JMenu eternity = new JMenu("Eternity");
         ImageIcon eternityIcon = new ImageIcon(getClass().getClassLoader().getResource("images/icon_superSmall.png"));
         eternity.setIcon(eternityIcon);
+        //about
+        JMenuItem about = new JMenuItem("About...");
+        about.addActionListener((e)->new EternityAboutPopup());
+        eternity.add(about);
         //dispose
         JMenuItem dispose = new JMenuItem("Dispose window");
         dispose.addActionListener((e)->Eternity.disposeUI());
