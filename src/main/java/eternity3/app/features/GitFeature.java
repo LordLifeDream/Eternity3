@@ -12,7 +12,6 @@ import org.eclipse.jgit.revwalk.RevWalk;
 import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 
 import java.io.File;
-import java.net.URI;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

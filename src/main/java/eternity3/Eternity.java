@@ -57,6 +57,7 @@ public class Eternity {
             PeriodicRestartFeature.class,
             GitFeature.class,
             GHWWPullFeature.class,
-            PeriodicPullFeature.class
+            PeriodicPullFeature.class,
+            PullOnInitFeature.class
     };
 }
