@@ -52,6 +52,9 @@ public class AppPanel extends JPanel {
         });
         output.setBorder(BorderFactory.createTitledBorder(BorderFactory.createRaisedBevelBorder(), "output"));
         this.add(output, BorderLayout.CENTER);
+        //app performance
+        AppPerformancePanel p = new AppPerformancePanel(app);
+        this.add(p, BorderLayout.EAST);
     }
 
     private void filLControlBar(){

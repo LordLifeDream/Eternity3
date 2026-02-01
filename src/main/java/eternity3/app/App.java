@@ -4,12 +4,16 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import eternity3.app.features.Feature;
+import oshi.SystemInfo;
+import oshi.software.os.OSProcess;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class App {
+    private static SystemInfo SI = new SystemInfo();
+
     @JsonIgnore
     private Process process;
     private String name;
@@ -135,6 +139,21 @@ public class App {
         int exitValue = process.exitValue();
         listeners.forEach((l)->l.onStop(this, exitValue));
         return exitValue;
+    }
+
+    //TODO: Move these into a PerformanceMonitor class or similar
+
+    @JsonIgnore
+    public long getMem(){
+        OSProcess osProcess = SI.getOperatingSystem().getProcess((int) this.process.pid());
+        return osProcess.getResidentSetSize();
+    }
+
+    //TODO: allow for current cpu?
+    @JsonIgnore
+    public double getCPU(){
+        OSProcess osProcess = SI.getOperatingSystem().getProcess((int) this.process.pid());
+        return osProcess.getProcessCpuLoadCumulative();
     }
 
     public void start(){

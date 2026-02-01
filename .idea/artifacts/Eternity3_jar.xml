@@ -25,6 +25,9 @@
         <element id="library" level="project" name="Maven: tools.jackson.core:jackson-core:3.0.3" />
         <element id="library" level="project" name="Maven: tools.jackson.core:jackson-databind:3.0.3" />
         <element id="library" level="project" name="Maven: net.lingala.zip4j:zip4j:2.11.5" />
+        <element id="library" level="project" name="Maven: net.java.dev.jna:jna-platform:5.18.1" />
+        <element id="library" level="project" name="Maven: net.java.dev.jna:jna:5.18.1" />
+        <element id="library" level="project" name="Maven: com.github.oshi:oshi-core:6.9.3" />
       </element>
     </root>
   </artifact>
