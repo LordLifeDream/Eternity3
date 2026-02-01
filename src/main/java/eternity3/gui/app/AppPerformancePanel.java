@@ -71,7 +71,7 @@ public class AppPerformancePanel extends JPanel {
 
     private String makeMemoryString(long bytes){
         if(bytes<1024)return bytes+" B";
-        String[] units = {"KiB", "MiB", "GiB", "TiB", "PiB"};
+        String[] units = {"B", "KiB", "MiB", "GiB", "TiB", "PiB"};
         double value = bytes;
         int i = 0;
         while(value >= 1024 && i < units.length - 1){
