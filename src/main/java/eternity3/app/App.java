@@ -137,7 +137,7 @@ public class App {
             throw new RuntimeException(e);
         }
         int exitValue = process.exitValue();
-        listeners.forEach((l)->l.onStop(this, exitValue));
+        //listeners.forEach((l)->l.onStop(this, exitValue));
         return exitValue;
     }
 
@@ -156,6 +156,11 @@ public class App {
         return osProcess.getProcessCpuLoadCumulative();
     }
 
+    private void onStop(){
+        int exitValue = process.exitValue();
+        listeners.forEach((l)->l.onStop(this, exitValue));
+    }
+
     public void start(){
         if(isRunning()) stop();
         //npm fix for windows
@@ -169,6 +174,7 @@ public class App {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        this.process.onExit().thenAccept((x)-> onStop());
         listeners.forEach((l)->l.onStart(this));
     }
 
